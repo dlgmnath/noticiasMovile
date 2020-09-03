@@ -1,0 +1,21 @@
+<ion-card class="card-bg"> 
+  <ion-card-header>
+    <ion-card-subtitle> 
+      <span class="card-index"> {{ index + 1 }} </span>
+      <span class="new-source-name">{{ new.source.name }}</span>
+      
+      <div class="more-news">
+        <ion-button fill="clear"
+                    (click)="launchMenu()">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+      </div>
+
+    </ion-card-subtitle>
+    <ion-card-title class="card-title" (click)="viewNew()" >{{ new.title }} </ion-card-title>
+    <ion-img *ngIf="new.urlToImage" (click)="viewNew()" [src]="new.urlToImage"> </ion-img>
+    <ion-card-content class="card-content"> 
+      <p class="card-title"> {{ new.description }}</p>
+    </ion-card-content>
+  </ion-card-header>
+</ion-card>
